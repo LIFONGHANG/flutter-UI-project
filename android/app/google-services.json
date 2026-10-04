@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "266784401738",
+    "project_id": "flutter-ui-salait-project",
+    "storage_bucket": "flutter-ui-salait-project.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:266784401738:android:b96b6deae32083d2d539b3",
+        "android_client_info": {
+          "package_name": "com.example.flutter_ui_project_salait"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbFKIR-JvMhIijDihjfym4PaONw11o2NM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
