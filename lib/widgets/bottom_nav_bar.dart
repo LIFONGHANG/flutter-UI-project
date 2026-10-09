@@ -9,10 +9,10 @@ class BottomNavBar extends StatelessWidget {
 
   final int currentIndex;
 
-  // onTap always receives an int
   final ValueChanged<int> onTap;
 
-  static const Color pinkColor = Color(0xFFF83758);
+  static const Color pinkColor =
+      Color(0xFFF83758);
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +20,6 @@ class BottomNavBar extends StatelessWidget {
       decoration: const BoxDecoration(
         color: Colors.white,
 
-        // Shadow above navigation bar
         boxShadow: [
           BoxShadow(
             color: Color(0x15000000),
@@ -37,7 +36,9 @@ class BottomNavBar extends StatelessWidget {
           height: 70,
 
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            mainAxisAlignment:
+                MainAxisAlignment.spaceAround,
+
             children: [
               // 0 - Home
               _navItem(
@@ -56,11 +57,11 @@ class BottomNavBar extends StatelessWidget {
               // 2 - Cart
               _cartButton(),
 
-              // 3 - Search
+              // 3 - Employee
               _navItem(
                 index: 3,
-                icon: Icons.search,
-                label: 'Search',
+                icon: Icons.people_outline,
+                label: 'Employee',
               ),
 
               // 4 - Setting
@@ -85,26 +86,32 @@ class BottomNavBar extends StatelessWidget {
     required IconData icon,
     required String label,
   }) {
-    final bool isSelected = currentIndex == index;
+    final bool isSelected =
+        currentIndex == index;
 
     return InkWell(
       onTap: () {
         onTap(index);
       },
 
-      borderRadius: BorderRadius.circular(10),
+      borderRadius:
+          BorderRadius.circular(10),
 
       child: SizedBox(
         width: 60,
         height: 60,
 
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment:
+              MainAxisAlignment.center,
+
           children: [
             Icon(
               icon,
               size: 25,
-              color: isSelected ? pinkColor : Colors.black,
+              color: isSelected
+                  ? pinkColor
+                  : Colors.black,
             ),
 
             const SizedBox(height: 4),
@@ -113,7 +120,9 @@ class BottomNavBar extends StatelessWidget {
               label,
               style: TextStyle(
                 fontSize: 11,
-                color: isSelected ? pinkColor : Colors.black,
+                color: isSelected
+                    ? pinkColor
+                    : Colors.black,
               ),
             ),
           ],
@@ -127,20 +136,24 @@ class BottomNavBar extends StatelessWidget {
   // ==========================================================
 
   Widget _cartButton() {
-    final bool isSelected = currentIndex == 2;
+    final bool isSelected =
+        currentIndex == 2;
 
     return InkWell(
       onTap: () {
         onTap(2);
       },
 
-      borderRadius: BorderRadius.circular(40),
+      borderRadius:
+          BorderRadius.circular(40),
 
       child: Transform.translate(
         offset: const Offset(0, -10),
 
         child: Column(
-          mainAxisSize: MainAxisSize.min,
+          mainAxisSize:
+              MainAxisSize.min,
+
           children: [
             Container(
               width: 52,
@@ -152,11 +165,13 @@ class BottomNavBar extends StatelessWidget {
 
                 boxShadow: [
                   BoxShadow(
-                    color: Colors.black.withValues(
+                    color:
+                        Colors.black.withValues(
                       alpha: 0.15,
                     ),
                     blurRadius: 10,
-                    offset: const Offset(0, 2),
+                    offset:
+                        const Offset(0, 2),
                   ),
                 ],
               ),
@@ -164,7 +179,9 @@ class BottomNavBar extends StatelessWidget {
               child: Icon(
                 Icons.shopping_cart_outlined,
                 size: 26,
-                color: isSelected ? pinkColor : Colors.black,
+                color: isSelected
+                    ? pinkColor
+                    : Colors.black,
               ),
             ),
 
@@ -174,7 +191,9 @@ class BottomNavBar extends StatelessWidget {
               'Cart',
               style: TextStyle(
                 fontSize: 11,
-                color: isSelected ? pinkColor : Colors.black,
+                color: isSelected
+                    ? pinkColor
+                    : Colors.black,
               ),
             ),
           ],
